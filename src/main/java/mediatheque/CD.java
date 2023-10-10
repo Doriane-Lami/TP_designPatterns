@@ -8,6 +8,11 @@ public class CD extends Item {
 		this.numberOfTracks = numberOfTracks;
 	}
 
+
+	public void accept(ItemVisitor v) {
+		v.visit(this);
+	}
+
 	public int getNumberOfTracks() {
 		return numberOfTracks;
 	}
@@ -16,9 +21,7 @@ public class CD extends Item {
 		this.numberOfTracks = numberOfTracks;
 	}
 
-	public void print() {
-		System.out.println(this);
-	}
+	//public void print() { System.out.println(this);}
 
 	@Override
 	public String toString() {
